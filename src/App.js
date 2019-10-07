@@ -14,19 +14,17 @@ const App = () => {
 
     return (
         <BrowserRouter>
-            <div className="container">
                 <Header/>
                 <Switch>
                     <Route exact path="/" render={() => <Redirect to="/home"/>}/>
                     <Route path="/first-react-app" render={() => <Redirect to="/home"/>}/>
-                    <Route path="/home" render={() => <Home />}/>
+                    <Route path="/home" component={Home}/>
                     <Route path="/about" render={() => <About title='About'/>}/>
                     <Route exact path="/teachers" component={Teachers}/>
                     <Route path="/teachers/:topic/:name" component={Feature}/>
                     <Route path="/courses" component={Courses}/>
                     <Route component={NotFound}/>
                 </Switch>
-            </div>
         </BrowserRouter>
     );
 };
