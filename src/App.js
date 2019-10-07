@@ -14,6 +14,7 @@ const App = () => {
 
     return (
         <BrowserRouter>
+            <div className="container">
                 <Header/>
                 <Switch>
                     <Route exact path="/" render={() => <Redirect to="/home"/>}/>
@@ -25,6 +26,7 @@ const App = () => {
                     <Route path="/courses" component={Courses}/>
                     <Route component={NotFound}/>
                 </Switch>
+            </div>
         </BrowserRouter>
     );
 };
