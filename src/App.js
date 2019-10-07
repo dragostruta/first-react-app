@@ -1,9 +1,5 @@
 import React from 'react';
-import {
-    BrowserRouter,
-    Route,
-    Switch
-} from 'react-router-dom';
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
 
 // App components
 import Home from "./components/Home";
@@ -19,7 +15,7 @@ const App = () => (
         <div className="container">
             <Header />
             <Switch>
-                <Route exact path="/" component={Home} />
+                <Route exact path="/home" component={Home} />
                 <Route path="/about" render={ () => <About title='About' /> } />
                 <Route exact path="/teachers" component={Teachers} />
                 <Route path="/teachers/:topic/:name" component={Feature} />
